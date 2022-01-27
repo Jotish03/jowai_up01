@@ -8,7 +8,7 @@
 <div>
     <h6 class="dateclass"><%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit' }).format(new Date()) %></h6>
     </div>
-    <table>
+    <table  >
       <div class="sectionresult">
         <%if(currentUser){%>
             <%if(currentUser.role.includes('admin')){%>
@@ -17,17 +17,17 @@
         <%}%>
       </div>
     <tr>
-    <th colspan=3 class="thbghead">JOWAI LADRYMBAI TEER</th>
+    <th colspan=3 class="thbghead">WEST JAINTAI HILLS TEER</th>
     </tr>
     <%if(result.length>0){%>
         <%result.forEach((data)=>{%>
             <tr>
-                <th class="thbg">F/R(<%=data.round1.time%>)</th>
-                <th class="thbg">S/R(<%=data.round2.time%>)</th>
+                <th class="thbg thwid" >JOWAI(<%=data.round1.time%>)</th>
+                <th class="thbg thwid">LADRYMBAI(<%=data.round2.time%>)</th>
 
                 <%if(currentUser){%>
                     <%if(currentUser.role.includes('admin')){%>
-                    <th class="thbg" >Action</th>
+                    <th class="thbg thwid" >Action</th>
                     <%}%>
                 <%}%>
 
@@ -49,11 +49,11 @@
         <%})%>
    <%}else{%>
 
-          <th class="thbg" >F/R [XX]</th>
-          <th class="thbg" >S/R [XX]</th>
+          <th class="thbg thwid" >JOWAI [XX]</th>
+          <th class="thbg thwid" >LADRYMBAI [XX]</th>
         <tr>
-          <td>XX</td>
-          <td>XX</td>
+          <td >XX</td>
+          <td >XX</td>
         </tr>   
     <%}%>
 
